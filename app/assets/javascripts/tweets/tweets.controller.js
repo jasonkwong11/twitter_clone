@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  function TweetsController(){
+  function TweetsController(TweetFactory){
     var vm = this;
 
     //callable methods on the VM
@@ -22,7 +22,8 @@
     }
 
     function getTweets(){
-
+        return TweetFactory.getTweets()
+            .then(setTweets)
     }
 
     function getTweet(){
@@ -40,9 +41,14 @@
     function deleteTweet(){
 
     } 
+
+    function setTweets(data){
+        return vm.tweets = data
+    }
   }
 
-
+  TweetsController.$inject = ['TweetFactory']
+  
   angular
     .module('app')
     .controller('TweetsController', TweetsController);
