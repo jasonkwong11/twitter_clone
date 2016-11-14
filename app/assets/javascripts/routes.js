@@ -11,9 +11,9 @@
             controller: 'HomeController as vm'
           })
           .state('home.tweets', {
-            url: '/tweets',
+            url: 'tweets',
             templateUrl: 'tweets/tweets.html',
-            controllers: 'TweestController as vm'
+            controller: 'TweetsController as vm'
           });
 
         $urlRouterProvider.otherwise('/');
