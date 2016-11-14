@@ -1,24 +1,18 @@
-# README
+# Twitter Clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Project Summary
 
-Things you may want to cover:
+This is a Twitter clone. It uses a Rails backend to persist tweets data and exposes the tweets ruby objects as JSON using ActiveModel Serializers. Angular renders it quickly without page refresh.
 
-* Ruby version
+## Installation
 
-* System dependencies
+To run this simply clone or fork it, run `bundle install`, `rake db:migrate` and then `rails s`.
 
-* Configuration
+Bower is included in the gem so if you want to add some front end dependencies, add them to the bower.json file and run `rake bower:install
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Todos
+- [X] Create Tweets ... Done
+- [X] Read Tweets ... Done
+- [ ] Update Tweets
+- [ ] Destroy Tweets
