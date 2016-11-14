@@ -31,7 +31,8 @@
     }
 
     function createTweet(){
-
+        return TweetFactory.createTweet(vm.newTweet)
+            .then(getTweets)
     }
 
     function updateTweet(){
@@ -48,7 +49,7 @@
   }
 
   TweetsController.$inject = ['TweetFactory']
-  
+
   angular
     .module('app')
     .controller('TweetsController', TweetsController);
