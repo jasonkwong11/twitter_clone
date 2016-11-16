@@ -21,6 +21,7 @@ class TweetsController < ApplicationController
 
   def update
     tweet = Tweet.find_by_id(params[:id])
+    raise tweet
     if tweet.update(tweet_params)
       render json: tweet
     else

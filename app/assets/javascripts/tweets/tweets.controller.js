@@ -35,8 +35,8 @@
             .then(getTweets)
     }
 
-    function updateTweet(){
-
+    function updateTweet(tweet_id){
+        return TweetFactory.updateTweet(tweet_id)
     }
 
     function deleteTweet(){

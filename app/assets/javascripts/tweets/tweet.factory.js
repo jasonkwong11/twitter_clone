@@ -35,8 +35,21 @@
         .catch(handleError)
     }
 
-    function updateTweet(){
+    function updateTweet(tweet_id){
+      console.log("FROM INSIDE TweetFactory.UPDATETWEET")
+      var req = {
+        method: 'PATCH',
+        url: '/tweets',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
+        data: {
+          id: tweet_id
+        }
+      };
 
+      return $http(req)
+        .catch(handleError)
     }
 
     function deleteTweet(){
