@@ -2,5 +2,5 @@
 <div ng-include="'tweets/new.html'"></div>
 
 <ul>
-  <li ng-repeat="tweet in vm.tweets track by tweet.id"> {{ tweet.content }} </li>
+  <li ng-repeat="tweet in vm.tweets track by tweet.id"> {{ tweet.content }} <button ng-click="vm.updateTweet(tweet.id)">Update Tweet</button></li>
 </ul>

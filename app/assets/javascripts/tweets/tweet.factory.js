@@ -17,7 +17,7 @@
     }
 
     function getTweet(){
-
+      return $http.get('/tweet/:id')
     }
 
     function createTweet(tweet){
